@@ -1,0 +1,27 @@
+{
+  "name": "sistema-betha",
+  "version": "1.0.0",
+  "description": "Sistema para gerenciar ordens de serviço de uma empresa que faz manutenções em equipamentos.",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.7",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriellaurindo/Sistema-para-controle-de-manutencao-de-equipamentos.git"
+  },
+  "author": "Gabriel laurindo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabriellaurindo/Sistema-para-controle-de-manutencao-de-equipamentos/issues"
+  },
+  "homepage": "https://github.com/gabriellaurindo/Sistema-para-controle-de-manutencao-de-equipamentos#readme"
+}
