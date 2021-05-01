@@ -1,13 +1,13 @@
 //Importando Módulos
 const bcrypt = require("bcrypt")
-const usuario = require("../models/User")
+const User = require("../models/User")
 const jwt = require('jsonwebtoken')
 const EnvConfig = require ('../../config/vars/env')
 
 //Função de login
 function  login (req,res){
-    const {email, senha} = req.body
-    usuario.findOne({email}).then(user =>{
+    const {nome, senha} = req.body
+    User.findOne({nome}).then(user =>{
         if(user){
             bcrypt.compare(senha, user.senha, (err, success)=>{
                 if(success){

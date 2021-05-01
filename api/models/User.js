@@ -10,7 +10,7 @@ const userSchema = new Schema({
        type: String,
        require:true
     },
-    eAdmin:{
+    flag:{
         type: String,
         trim: true,
         uppercase: true,
@@ -24,9 +24,9 @@ const userSchema = new Schema({
 })
 
 //Definindo modelo de usuário baseado no Schema
-const user = mongoose.model("user", userSchema)
+const User = mongoose.model("User", userSchema)
 
 //Exportando Módulo
-module.exports = user
+module.exports = User
 
 
