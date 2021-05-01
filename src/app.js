@@ -8,9 +8,11 @@ app.use(bodyParser.json())
 
 //Importar Rotas
 const index =   require('../routes/index')
+const login =   require('../routes/login')
 
 //Usar Rotas
 app.use('/',index)
+app.use('/',login)
 
 //Importando Banco
 require("../config/database")
