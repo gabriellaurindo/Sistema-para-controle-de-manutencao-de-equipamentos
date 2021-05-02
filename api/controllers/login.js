@@ -11,8 +11,6 @@ function  login (req,res){
         if(user){
             bcrypt.compare(senha, user.senha, (err, success)=>{
                 if(success){
-                    user.senha = undefined
-                    user.eAdmin= undefined
                     const token = jwt.sign({id : user.id}, EnvConfig.secret, {
                         expiresIn : 86400
                     })

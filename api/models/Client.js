@@ -5,29 +5,45 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 //Criando e configurando um novo Schema
-const userSchema = new Schema({
+const clientSchema = new Schema({
     nome:{
        type: String,
        require:true
     },
     flag:{
         type: String,
-        trim: true,
         uppercase: true,
         required: true,
         maxlength: 1,
-        select:false
+        default:"A"
     },
-    senha:{
+    email:{
         type:String,
         require:true,
+    },
+    telefone:{
+        type:String,
+        require:true,
+    },
+    endereco:{
+        type:String,
+        require:true,
+    },
+    cod:{
+        type:Number,
+        require:true,
+        default:0
+    },
+    data_de_criacao:{
+        type: Date,
+        default: Date.now
     }
 })
 
 //Definindo modelo de usuário baseado no Schema
-const User = mongoose.model("User", userSchema)
+const Client = mongoose.model("Client", clientSchema)
 
 //Exportando Módulo
-module.exports = User
+module.exports = Client
 
 

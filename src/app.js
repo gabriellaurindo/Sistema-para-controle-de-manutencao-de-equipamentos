@@ -9,10 +9,14 @@ app.use(bodyParser.json())
 //Importar Rotas
 const index =   require('../routes/index')
 const login =   require('../routes/login')
+const cadastro_os = require('../routes/cadastro-os')
+const pesquisa_os = require('../routes/pesquisa-os')
 
 //Usar Rotas
 app.use('/',index)
 app.use('/',login)
+app.use('/',cadastro_os)
+app.use('/',pesquisa_os)
 
 //Importando Banco
 require("../config/database")
