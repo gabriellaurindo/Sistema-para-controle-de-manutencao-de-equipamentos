@@ -1,8 +1,8 @@
 //Importando Módulos
-const Os = require("../models/Os")
+const Client = require("../models/Client")
 
 async function pesquisa_cliente (req,res){
-    await Os.find().then(listagem =>{
+    await Client.find().then(listagem =>{
         res.send(listagem)
     }) 
 }    

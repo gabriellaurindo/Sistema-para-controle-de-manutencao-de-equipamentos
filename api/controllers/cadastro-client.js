@@ -5,8 +5,8 @@ const Client = require("../models/Client")
 function  cadastro_client (req,res){
     Client.find().limit(1).sort({data_de_criacao: 'desc' }).then(ordem =>{
         cod = ordem[0].cod + 1
-        const {descricao, idclient} = req.body
-        Os.create({cod, descricao, idclient}).catch((err)=>{
+        const {nome, email, telefone, endereco} = req.body
+        Client.create({cod, nome, email, telefone, endereco}).catch((err)=>{
             console.log("Houve um erro: " + err);
             res.statusCode = 401
             res.send({Error:err})
@@ -17,4 +17,4 @@ function  cadastro_client (req,res){
 }
 
 //Exportando Módulo
-module.exports = cadastro_os
+module.exports = cadastro_client
